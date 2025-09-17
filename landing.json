@@ -2,7 +2,7 @@
   "version": 2,
   "title": "Migrate VMware workloads to IBM Cloud VPC with PrimaryIO",
   "introduction": "This whitepaper presents PrimaryIO’s solution framework for migrating VMware workloads from on-premises environments to IBM Cloud Virtual Server Instances (VSIs) hosted within the IBM Virtual Private Cloud (VPC)",
-  "product_page": "https://cloud.ibm.com/catalog/services/convertio-vmware-workload-migration-and-conversion",
+  "product_page": "https://cloud.ibm.com/docs/convertio-vmwareworkloads",
   "console_page": "/relative/console/path",
   "section_topics": {
     "links": [
