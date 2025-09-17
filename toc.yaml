@@ -9,6 +9,8 @@ toc:
     href: /docs/convertio-vmwareworkloads
     service-name: service-name # Replace
     audience: service
+    content-type: white-paper
+    navigation: hidden
     category: virtualservers
     label: Migrate VMware workloads to IBM Cloud VPC environment. # Replace
   entries:
