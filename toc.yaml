@@ -5,47 +5,22 @@
 toc:
   properties:
     subcollection: convertio-vmwareworkloads
-    path: convertio-vmwareworkloads
-    href: /docs/convertio-vmwareworkloads
-    service-name: service-name # Replace
-    audience: service
+    audience: solution
+    category: solution_docs
     content-type: white-paper
     navigation: hidden
-    category: virtualservers
-    label: Migrate VMware workloads to IBM Cloud VPC environment. # Replace
+    href: /docs/convertio-vmwareworkloads
+    path: convertio-vmwareworkloads
+    label: Migrate VMware workloads to IBM Cloud VPC environment
+    description: Whitepaper for VMWare Migration to IBM Cloud with Primaryio. # Replace
+    authors:
+    - name: Dwarkanath P Rao # Replace
+      title: STSM, IBM Cloud Solutioning
+      job-description: I am Senior Technical Staff Member for IBM Cloud. # Optional, max 350 characters
+      image: images/dwarkanath.jpeg                      # Square image at least 200 px x 200 px
+      url: https://www.linkedin.com/in/dwarakanath/ 
   entries:
   - navgroup:
       id: overview
       topics:
-      - PrimaryIO-migrationservices.md
-#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
-#  Links to your command line reference docs should be included in the Reference navigation group.
-#  - navgroup:
-#      id: reference
-#      topics:
-#      - topicgroup:
-#          id: api-reference
-#          label: API reference
-#          links:
-#          - link:
-#              label: My V2 API docs
-#              href: https://{DomainName}/apidocs/my-api/my-api-v2
-#          - link:
-#              label: My V1 API docs
-#              href: https://{DomainName}/apidocs/my-api/my-api-v1
-#      - topicgroup:
-#          id: command-reference
-#          label: Command reference
-#          topics:
-#          - include: ../my-cli-repo/cli-topic.md
-#
-#  - navgroup:
-#      id: help
-#      topics:
-#      - get-help.md
-#      - faqs.md
-#      - topicgroup:
-#          id: troubleshooting
-#          label: Troubleshooting
-#          topics:
-#          - troubleshoot.md
+      - primaryio.md
