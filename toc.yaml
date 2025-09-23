@@ -17,7 +17,7 @@ toc:
     - name: Dwarkanath P Rao # Replace
       title: STSM, IBM Cloud Solutioning
       job-description: I am Senior Technical Staff Member for IBM Cloud. # Optional, max 350 characters
-      image: images/dwarkanath.jpeg                      # Square image at least 200 px x 200 px
+      image: image/dwarkanath.jpeg                      # Square image at least 200 px x 200 px
       url: https://www.linkedin.com/in/dwarakanath/ 
   entries:
   - navgroup:

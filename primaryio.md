@@ -223,13 +223,9 @@ Documentation
 
 ## Reference links
 
-1.  IBM Cloud Catalog Tile
+1.  [IBM Cloud Catalog Tile](https://cloud.ibm.com/catalog/services/convertio-vmware-workload-migration-and-conversion)
 
-    <https://cloud.ibm.com/catalog/services/convertio-vmware-workload-migration-and-conversion>
-
-2.  ConvertIO webpage on PrimaryIO.com
-
-    <https://www.primaryio.com/convertio/>
+2.  [ConvertIO webpage on PrimaryIO.com](https://www.primaryio.com/convertio/)
 
 ## Conclusion
 
