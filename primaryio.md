@@ -14,7 +14,7 @@ subcollection: converio-vmwareworkloads
 
 
 # Executive Summary
-{: #executive-summary }
+{: #executive-summary}
 
 **Overview**
 {: #overview}
@@ -46,11 +46,11 @@ Technology
 **The solution, called *ConvertIO*, uses intelligent I/O handling, optimized data transfer, and virtual disk format conversion to minimize migration time, reduce risk, and simplify the overall process.
 
 ### Why IBM Cloud VPC?
-
+{: #vpc }
 IBM Cloud VPC offers a secure, scalable, and high-performance infrastructure with high fidelity network control, isolation, and high availability across multiple zones. It delivers on-premises–like VM performance with the cost efficiency and flexibility of the cloud—without requiring VMware.
 
 ### Use Case
-
+{: #usecase }
 This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal disruption, and scalable cost efficiency. The primary driver is to reduce reliance on Broadcom VMware by adopting a cloud-native architecture built on the widely used KVM hypervisor.
 
 ## Functional Requirements
