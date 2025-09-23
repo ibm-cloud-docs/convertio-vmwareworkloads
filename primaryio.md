@@ -126,7 +126,7 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 ### Architecture for On-premises and IBM Cloud
 {: #ref-arch}
 
-![Diagram of a cloud computing diagram AI-generated content may be incorrect.](image/2691761bd2a4d79e9f85d9d2b467ee47.jpeg){: caption="Reference architecture" caption-side="bottom"}
+![ConvertIO High-Level Architecure](image/2691761bd2a4d79e9f85d9d2b467ee47.jpeg){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
 
 ### Architecture details
 {: #arch-details}
@@ -218,7 +218,7 @@ Due to the ability to rapidly scale up and down a VPC estate, some VMware VMs mi
     -   Optimize cloud instances
     -   Enable monitoring with IBM Cloud Monitoring
 
-![alt-text for diagram](image/50d77f40e9fd565d6ba320c4b0c05a5a.png){: caption="Another diagram-- fix this" caption-side="bottom"}
+![ConvertIO configuration UI](image/50d77f40e9fd565d6ba320c4b0c05a5a.png){: caption="Configuration for ConvertIO" caption-side="bottom"}
 
 ConvertIO UI utilized to generate conversion profile enabling conversion at scale.
 
