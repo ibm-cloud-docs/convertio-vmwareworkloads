@@ -51,17 +51,17 @@ Technology
 **The solution, called *ConvertIO*, uses intelligent I/O handling, optimized data transfer, and virtual disk format conversion to minimize migration time, reduce risk, and simplify the overall process.
 
 ### Why IBM Cloud VPC?
-{: #vpc }
+{: #vpc}
 
 IBM Cloud VPC offers a secure, scalable, and high-performance infrastructure with high fidelity network control, isolation, and high availability across multiple zones. It delivers on-premises–like VM performance with the cost efficiency and flexibility of the cloud—without requiring VMware.
 
 ### Use Case
-{: #usecase }
+{: #usecase}
 
 This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal disruption, and scalable cost efficiency. The primary driver is to reduce reliance on Broadcom VMware by adopting a cloud-native architecture built on the widely used KVM hypervisor.
 
 ## Functional Requirements
-{: #requirements }
+{: #requirements}
 
 -   Application-consistent migration of VMs
 -   Minimal downtime cutover
@@ -74,7 +74,7 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 -   Option for Day-2 assistance with IBM Cloud Console as the new construct management tool in lieu of VMware vSphere.
 
 ## Non-Functional Requirements
-{: #nfrs }
+{: #nfrs}
 
 -   End-to-end data encryption
 -   Minimal production site performance degradation during sync
@@ -82,17 +82,17 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 -   Compliance with customer governance and security frameworks
 
 ## Pre-requisites for PrimaryIO migration
-{: #prereqs }
+{: #prereqs}
 
 ### On-Prem VMware Environment
-{: #onprem-env }
+{: #onprem-env}
 
 -   vCenter 7.X and above
 -   VMware tools installed on source VMs
 -   SSL certificates
 
 ### IBM Cloud VPC
-{: #cloud-vpc }
+{: #cloud-vpc}
 
 -   VPC infrastructure deployed in target region (e.g., eu-de)
 -   Provision Controller VSI in IBM Cloud
@@ -102,10 +102,10 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 -   Requisite domain matching and IP addressing managed
 
 ## PrimaryIO Components (utilized by PrimaryIO services team)
-{: #components }
+{: #components}
 
 ### IBM Cloud VPC
-{: #vpc-commponent }
+{: #vpc-commponent}
 
 -   Controller VSI in each VPC migration zone
 -   PrimaryIO ConvertIO Controller software on Controller VSI
@@ -114,14 +114,14 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 -   Cloud Gateway (connects to IBM Cloud storage)
 
 ### On-Prem VMware Environment
-{: #vmware-component }
+{: #vmware-component}
 
 -   ConvertIO software installed on one virtual machine running Rocky Linux 9. The software bundles all components required in one installer. This deployment is adequate for most installations - supporting thousands of VMs. (Performed by PrimaryIO Global Services)
 -   1 Linux VM (Cent/OS 7, Rocky Linux 9), Min 8GB RAM, 4 vCPU, 16 GB root disk
 -   Additional VM-accessible storage data volume to stage VM exports. Sized to largest VMDK sizing. 8TB as recommended min.
 
 ## Technical Architecture
-{: #technical-arch }
+{: #technical-arch}
 
 ### Architecture for On-premises and IBM Cloud
 {: #ref-arch}
@@ -129,7 +129,7 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 ![Diagram of a cloud computing diagram AI-generated content may be incorrect.](image/2691761bd2a4d79e9f85d9d2b467ee47.jpeg){: caption="Reference architecture" caption-side="bottom"}
 
 ### Architecture details
-{: #arch-details }
+{: #arch-details}
 
 -   On-premises resident ConvertIO controller as described in Section 1.5.2. This controller packages up the VM and transmits to a similarly configured Cloud Controller VSI that takes receipt of the transmitted VM.
     -   On-Premises site requires an appropriate network connection to the IBM Cloud VPC, Cloud Controller and associated storage.
@@ -137,7 +137,7 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
     -   Appropriately-sized VSI compute, network and storage needs to be configured in the Customer Target VPC platform
 
 ## Architecture design considerations
-{: #decisions }
+{: #decisions}
 
 | **Area**           | **Decision**                                                                             |
 |--------------------|------------------------------------------------------------------------------------------|
@@ -151,10 +151,10 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 {: caption="Design considerations" caption-side="bottom"}
 
 ## Attributes, components, considerations for ConvertIO Implementations
-{: #considerations }
+{: #considerations}
 
 ### IBM Cloud VPC
-{: #vpc-considerations }
+{: #vpc-considerations}
 
 It should be noted that the ConvertIO comprises the tooling and service that migrate the VMware VMs from on-prem to VPC VSIs. There are no significant design decisions that need to be made regarding the ConvertIO itself. However, choosing to replatform to IBM Cloud VPC from VMware is a significant decision that will also require decisions on the design and optimal configuration of the landing zone(s) for the newly replatformed workloads.
 
@@ -165,13 +165,13 @@ Regarding the resources required in VPC, sizing for compute, storage and network
 Due to the ability to rapidly scale up and down a VPC estate, some VMware VMs might optionally be minimally configured due to only occasional use. No longer any need to pay for what one is not using. Applications can be tiered accordingly such that business-critical workloads can be resourced differently from Dev / Test type workloads.
 
 ### Network resource attributes, components for ConvertIO
-{: #network-considerations }
+{: #network-considerations}
 
 -   During the data transfer of VMs into IBM Cloud, appropriate assessment for network bandwidth will need to be conducted in order to complete the replatforming in the targeted timeframe required. In terms of limiting bandwidth utilization, ConvertIO does not cap bandwidth at the software level; any limits should be enforced via VMware traffic shaping on the vSwitch or distributed switch.
 -   Network needs to enable access to VPC and associated Cloud Object Storage, all VPC zones and Internet access for package installation.
 
 ### Security components, attributes for ConvertIO
-{: #security-considerations }
+{: #security-considerations}
 
 -   TLS 1.2+ encryption
 -   Authentication via IAM roles and credentials
@@ -180,7 +180,7 @@ Due to the ability to rapidly scale up and down a VPC estate, some VMware VMs mi
 -   VPC Security Groups to restrict access
 
 ## Outcome-focused Migration Workflow - performed by PrimaryIO
-{: #migration }
+{: #migration}
 
 **Discovery Phase**
     -   Identify and prioritize VMs for migration
@@ -223,7 +223,7 @@ Due to the ability to rapidly scale up and down a VPC estate, some VMware VMs mi
 ConvertIO UI utilized to generate conversion profile enabling conversion at scale.
 
 ## Migration considerations
-{: #migration-considerations }
+{: #migration-considerations}
 
 Security
     -   Encrypts all storage and data-in-flight.
@@ -238,7 +238,7 @@ Documentation
     -   Maintain runbooks, rollback plans, and architectural diagrams.
 
 ## Benefits
-{: #benefits }
+{: #benefits}
 
 -   Complete VM migration - managed by PrimaryIO
 -   Zero-rebuild target VMs
@@ -248,7 +248,7 @@ Documentation
 -   Tight integration with IBM Cloud infrastructure
 
 ## Limitations & Risks
-{: #limitations }
+{: #limitations}
 
 -   Network throughput limitations during sync
 -   Need for firewall/VPN configuration
@@ -257,13 +257,13 @@ Documentation
 -   Complex app dependencies needing post-migration workload testing
 
 ## Reference links
-{: #references }
+{: #references}
 
 1.  [IBM Cloud Catalog Tile](https://cloud.ibm.com/catalog/services/convertio-vmware-workload-migration-and-conversion)
 
 2.  [ConvertIO webpage on PrimaryIO.com](https://www.primaryio.com/convertio/)
 
 ## Conclusion
-{: #conclusion }
+{: #conclusion}
 
 ConvertIO is a service-wrapped technology focused on the outcome of re-platforming VMware VMs to IBM Cloud VPC Virtual Server Instances. While many details are presented in this document, this level of detail is only to increase understanding and enable decision-making. The knowledge is primarily useful and codified in processes, documents and tools utilized by the PrimaryIO Global Services Team members. The ultimate outcome is to predictably transition existing VMware workloads to IBM Cloud-native workloads without disruption to existing operations.
