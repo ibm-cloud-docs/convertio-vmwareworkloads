@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-09-24"
 
 keywords:
 
@@ -13,8 +13,8 @@ subcollection: converio-vmwareworkloads
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Executive Summary
-{: #executive-summary}
+# VMware workloads to IBM Cloud-native VSIs in VPC with PrimaryIO
+{: #Primaryio-convertio}
 
 ## Overview
 {: #overview}
@@ -55,8 +55,7 @@ Technology
 
 IBM Cloud VPC offers a secure, scalable, and high-performance infrastructure with high fidelity network control, isolation, and high availability across multiple zones. It delivers on-premises–like VM performance with the cost efficiency and flexibility of the cloud—without requiring VMware.
 
-### Use Case
-{: #usecase}
+Use Case
 
 This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal disruption, and scalable cost efficiency. The primary driver is to reduce reliance on Broadcom VMware by adopting a cloud-native architecture built on the widely used KVM hypervisor.
 
@@ -126,7 +125,7 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 ### Architecture for On-premises and IBM Cloud
 {: #ref-arch}
 
-![ConvertIO High-Level Architecure](image/2691761bd2a4d79e9f85d9d2b467ee47.jpeg){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
+![ConvertIO High-Level Architecure](image/Convertio-architecture.jpeg){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
 
 ### Architecture details
 {: #arch-details}
@@ -218,7 +217,7 @@ Due to the ability to rapidly scale up and down a VPC estate, some VMware VMs mi
     -   Optimize cloud instances
     -   Enable monitoring with IBM Cloud Monitoring
 
-![ConvertIO configuration UI](image/50d77f40e9fd565d6ba320c4b0c05a5a.png){: caption="Configuration for ConvertIO" caption-side="bottom"}
+![ConvertIO configuration UI](image/Convertio-console.png){: caption="Configuration for ConvertIO" caption-side="bottom"}
 
 ConvertIO UI utilized to generate conversion profile enabling conversion at scale.
 
