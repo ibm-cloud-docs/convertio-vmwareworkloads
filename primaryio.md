@@ -163,18 +163,6 @@ Regarding the resources required in VPC, sizing for compute, storage and network
 
 Due to the ability to rapidly scale up and down a VPC estate, some VMware VMs might optionally be minimally configured due to only occasional use. No longer any need to pay for what one is not using. Applications can be tiered accordingly such that business-critical workloads can be resourced differently from Dev / Test type workloads.
 
-
-| **Area**           | **Decision**                                                                             |
-|--------------------|------------------------------------------------------------------------------------------|
-| Data Transfer Mode | Asynchronous for low impact; app-consistent snapshots for final cutover                  |
-| Data Transfer Path | VPN preferred; Direct Link for large workloads                                           |
-| Target VM Sizing   | Match CPU/RAM/storage or optimize for IBM Cloud                                          |
-| Storage Tier       | Tier 3 Block Storage (Balanced IOPS) for majority; Tier 1 for DBs                        |
-| Cutover Plan       | Test in staging VPC; schedule cutover in low-traffic window                              |
-| Rollback Plan      | Source VMs remain unmodified, rollback only requires powering on the original source VMs |
-| Security Controls  | End-to-end encryption, Authentication in PrimaryIO console                               |
-{: caption="Design considerations" caption-side="bottom"}
-
 ### Network resource attributes, components for ConvertIO
 {: #network-considerations}
 
@@ -189,7 +177,8 @@ Migration strategy example
 | Design Consideration            | Requirement                                          | Options                                                           | PrimaryIO Design Guidance                                                                                                                         | Rationale                                                                        |
 |---------------------------------|------------------------------------------------------|-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | Migration Type - Cold (Offline) | Connectivity to Replicate workloads to IBM Cloud VPC | Workloads Replicated  VM Validation and Performance Verification  | This approach allows workloads to be fully tested prior to VM failover from Source  Final Data Sync will be required prior to production failover | Proves the platform configuration and functionality prior to production failover |
-| Migration Type - Warm (Online)  | Routed or Stretched Network into IBM Cloud           | Workloads Replicated with same of different IP addressing         | This approach allows the destination landing zone to be built and configured allowing a coexistence with the source platform                      | Enables minimal disruption and seamless transition for production workloads      |{: caption="Migration deployment strategy considerations" caption-side="bottom"}
+| Migration Type - Warm (Online)  | Routed or Stretched Network into IBM Cloud           | Workloads Replicated with same of different IP addressing         | This approach allows the destination landing zone to be built and configured allowing a coexistence with the source platform                      | Enables minimal disruption and seamless transition for production workloads      |
+{: caption="Migration deployment strategy considerations" caption-side="bottom"}
 
 
 ### Security components, attributes for ConvertIO
