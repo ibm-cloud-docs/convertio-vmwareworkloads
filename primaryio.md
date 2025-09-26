@@ -45,10 +45,10 @@ This document is intended for key decision-makers and technical stakeholders inv
 {: #cloud-native-workloads}
 
 Migration Approach
-**PrimaryIO combines software, expertise, and proven processes to deliver a practical solution for low-downtime, application-consistent migration of VMware workloads to IBM Cloud Virtual Server Instances (VSIs)—without relying on VMware post-migration.
+PrimaryIO combines software, expertise, and proven processes to deliver a practical solution for low-downtime, application-consistent migration of VMware workloads to IBM Cloud Virtual Server Instances (VSIs)—without relying on VMware post-migration.
 
 Technology
-**The solution, called *ConvertIO*, uses intelligent I/O handling, optimized data transfer, and virtual disk format conversion to minimize migration time, reduce risk, and simplify the overall process.
+The solution, called ConvertIO, uses intelligent I/O handling, optimized data transfer, and virtual disk format conversion to minimize migration time, reduce risk, and simplify the overall process.
 
 ### Why IBM Cloud VPC?
 {: #vpc}
@@ -124,9 +124,11 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 
 ### Architecture for On-premises and IBM Cloud
 {: #ref-arch}
+
 This is a Architecture of PrimaryIO deployment on IBM Cloud.
-This image illustrates the high-level architecture of ConvertIO, detailing the migration flow from a customer's on-premises VMware environment to IBM Cloud.
-![ConvertIO High-Level Architecure](image/Architecture.jpeg){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
+This diagram illustrates the high-level architecture of ConvertIO, detailing the migration flow from a customer's on-premises VMware environment to IBM Cloud.
+
+![ConvertIO High-Level Architecure](image/Architecture.png){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
 
 ### Architecture overview
 {: #arch-overview}
