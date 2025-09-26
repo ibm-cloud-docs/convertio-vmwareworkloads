@@ -19,6 +19,10 @@ toc:
       job-description: I am Senior Technical Staff Member for IBM Cloud. # Optional, max 350 characters
       image: image/rao.jpg                      # Square image at least 200 px x 200 px
       url: https://www.linkedin.com/in/dwarakanath/
+    - name: Imran Khan
+      title: Technical Solution Architect, IBM Cloud Solutioning
+      image: image/Imran.jpg 
+      url: https://www.linkedin.com/in/imran-khan-6499bb9
   entries:
   - navgroup:
       id: overview
