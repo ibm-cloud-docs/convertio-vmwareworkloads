@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2025
-lastupdated: "2025-09-24"
+lastupdated: "2025-09-26"
 
 keywords:
 
@@ -124,8 +124,9 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 
 ### Architecture for On-premises and IBM Cloud
 {: #ref-arch}
-
-![ConvertIO High-Level Architecure](image/Convertio-architecture.jpeg){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
+This is a Architecture of PrimaryIO deployment on IBM Cloud.
+This image illustrates the high-level architecture of ConvertIO, detailing the migration flow from a customer's on-premises VMware environment to IBM Cloud.
+![ConvertIO High-Level Architecure](image/Architecture.jpeg){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
 
 ### Architecture details
 {: #arch-details}
@@ -155,15 +156,15 @@ This solution enables the migration of VMware VMs to IBM Cloud VPC with minimal 
 ### IBM Cloud VPC
 {: #vpc-considerations}
 
-It should be noted that the ConvertIO comprises the tooling and service that migrate the VMware VMs from on-prem to VPC VSIs. There are no significant design decisions that need to be made regarding the ConvertIO itself. However, choosing to replatform to IBM Cloud VPC from VMware is a significant decision that will also require decisions on the design and optimal configuration of the landing zone(s) for the newly replatformed workloads.
+-   It should be noted that the ConvertIO comprises the tooling and service that migrate the VMware VMs from on-prem to VPC VSIs. There are no significant design decisions that need to be made regarding the ConvertIO itself. However, choosing to replatform to IBM Cloud VPC from VMware is a significant decision that will also require decisions on the design and optimal configuration of the landing zone(s) for the newly replatformed workloads.
 
-Regarding Cloud design decisions, in replatforming from VMware (on-prem) to IBM Cloud VSIs, the decisions that need to be made will be cloud-oriented decisions regarding region(s) and zone(s). One of the benefits of Cloud is the ability to locate resources across geographical regions - and within regions, across zones. These kinds of decisions will need to be made based on considerations including on-prem locale, availability, redundancy, business continuity, latency, security and other typical cloud factors.
+-   Regarding Cloud design decisions, in replatforming from VMware (on-prem) to IBM Cloud VSIs, the decisions that need to be made will be cloud-oriented decisions regarding region(s) and zone(s). One of the benefits of Cloud is the ability to locate resources across geographical regions - and within regions, across zones. These kinds of decisions will need to be made based on considerations including on-prem locale, availability, redundancy, business continuity, latency, security and other typical cloud factors.
 
-Regarding the resources required in VPC, sizing for compute, storage and network will be a function of the VMware VM(s) being converted. Similar requirements to the on-prem configurations will be required in IBM Cloud.
+-   Regarding the resources required in VPC, sizing for compute, storage and network will be a function of the VMware VM(s) being converted. Similar requirements to the on-prem configurations will be required in IBM Cloud.
 
-Due to the ability to rapidly scale up and down a VPC estate, some VMware VMs might optionally be minimally configured due to only occasional use. No longer any need to pay for what one is not using. Applications can be tiered accordingly such that business-critical workloads can be resourced differently from Dev / Test type workloads.
+-   Due to the ability to rapidly scale up and down a VPC estate, some VMware VMs might optionally be minimally configured due to only occasional use. No longer any need to pay for what one is not using. Applications can be tiered accordingly such that business-critical workloads can be resourced differently from Dev / Test type workloads.
 
-### Network resource attributes, components for ConvertIO
+### Network Considerations
 {: #network-considerations}
 
 -   During the data transfer of VMs into IBM Cloud, appropriate assessment for network bandwidth will need to be conducted in order to complete the replatforming in the targeted timeframe required. In terms of limiting bandwidth utilization, ConvertIO does not cap bandwidth at the software level; any limits should be enforced via VMware traffic shaping on the vSwitch or distributed switch.
