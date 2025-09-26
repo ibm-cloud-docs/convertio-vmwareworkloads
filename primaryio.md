@@ -128,8 +128,8 @@ This is a Architecture of PrimaryIO deployment on IBM Cloud.
 This image illustrates the high-level architecture of ConvertIO, detailing the migration flow from a customer's on-premises VMware environment to IBM Cloud.
 ![ConvertIO High-Level Architecure](image/Architecture.jpeg){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
 
-### Architecture details
-{: #arch-details}
+### Architecture overview
+{: #arch-overview}
 
 -   On-premises resident ConvertIO controller as described in Section 1.5.2. This controller packages up the VM and transmits to a similarly configured Cloud Controller VSI that takes receipt of the transmitted VM.
     -   On-Premises site requires an appropriate network connection to the IBM Cloud VPC, Cloud Controller and associated storage.
@@ -173,7 +173,7 @@ This image illustrates the high-level architecture of ConvertIO, detailing the m
 
 ### Migration, deployment strategy
 {: #migration-strategy}
-Migration strategy example
+Migration strategy
 
 | Design Consideration            | Requirement                                          | Options                                                           | PrimaryIO Design Guidance                                                                                                                         | Rationale                                                                        |
 |---------------------------------|------------------------------------------------------|-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
