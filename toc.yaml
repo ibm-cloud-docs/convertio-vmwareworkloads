@@ -23,6 +23,10 @@ toc:
       title: Technical Solution Architect, IBM Cloud Solutioning
       image: image/Imran.jpg 
       url: https://www.linkedin.com/in/imran-khan-6499bb9
+    - name: Julian Henkin  
+      title: Client eXperience Officer, PrimaryIO
+      image: image/Julian.jpg
+      url: https://www.linkedin.com/in/julianhenkin/
   entries:
   - navgroup:
       id: overview
