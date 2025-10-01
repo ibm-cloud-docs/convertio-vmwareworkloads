@@ -70,7 +70,7 @@ Migrating to VPC can be done with minimal disruption and a scalable cost efficie
 
 The solution, called *[CovertIO](https://www.primaryio.com/convertio/)* uses intelligent I/O handling, optimized data transfer, and virtual disk format conversion to minimize migration time, reduce risk, and simplify the overall process. Check out the following diagram to see a high level CovertIo architecture.
 
-![ConvertIO High-Level Architecure](image/Architecture.jpeg){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
+![ConvertIO High-Level Architecure](image/Architecture.png){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
 
 -   On-premises resident ConvertIO controller as described in Section 1.5.2. This controller packages up the VM and transmits to a similarly configured Cloud Controller VSI that takes receipt of the transmitted VM.
     -   On-Premises site requires an appropriate network connection to the IBM Cloud VPC, Cloud Controller and associated storage.
