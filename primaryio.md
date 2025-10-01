@@ -30,29 +30,6 @@ This document is intended for key decision-makers and technical stakeholders inv
 -   **IT Transformation Leaders** – for driving modernization initiatives and business continuity planning.
 
 
-SG NOTE: What are these requirements? They don't mean anything to me.
-
-## Functional Requirements
-{: #requirements}
-
--   Application-consistent migration of VMs
--   Minimal downtime cutover
--   Limited organization resources
--   VCenter credentials required for configuration modifications
--   Network integration with VPC Subnets
--   Connectivity via IBM Cloud VPN or Direct Link for secure transfer
--   Support for a variety of workloads (x86, flavors of Linux)
--   Operational VMs and associated applications following cutover to VSIs
--   Option for Day-2 assistance with IBM Cloud Console as the new construct management tool in lieu of VMware vSphere.
-
-## Non-Functional Requirements
-{: #nfrs}
-
--   End-to-end data encryption
--   Minimal production site performance degradation during sync
--   Scalability for thousands of VMs
--   Compliance with customer governance and security frameworks
-
 ## Before you begin
 {: #before-begin}
 
@@ -61,9 +38,12 @@ Before you can start migrating by using PrimaryIO, be sure that you have the fol
 * An On-prem VMware environment
 	* vCenter 7.x and higher
 	* VMware tools installed on source VMs
+	* VCenter credentials required for configuration modifications
+	* Agreed migration cutover to cloud
 	* SSL certificate
 	* ConvertIO software that is installed on a virtual machine that is running Rocky Linux 9. It needs to have a minimum of 8GB RAM, 4vCPU, and a 16GB root disk. 
 	* An additional VM-accessible storage data volume to stage exports. It should be sized at the largest VMDK sizing - at least 8TB as a recommended minimum.
+	* Align to customer's compliance and security frameworks
 
 * IBM Cloud VPC
 	* VPC infrastructure deployed in a target region
@@ -71,6 +51,7 @@ Before you can start migrating by using PrimaryIO, be sure that you have the fol
 	* IBM Cloud VSI images sizing
 	* Connectivity (VPN or Direct Link) established
 	* SSH/RDP keys provisioned
+	* Encryption as needed by the customer
 	* Requiste domain matching and IP addressing managed
 	* A controller VSI in each VPC migration zone
 	* PrimaryIO ConvertIO controller software on the controller VSI
@@ -89,7 +70,7 @@ Migrating to VPC can be done with minimal disruption and a scalable cost efficie
 
 The solution, called *[CovertIO](https://www.primaryio.com/convertio/)* uses intelligent I/O handling, optimized data transfer, and virtual disk format conversion to minimize migration time, reduce risk, and simplify the overall process. Check out the following diagram to see a high level CovertIo architecture.
 
-![ConvertIO High-Level Architecure](image/Convertio-architecture.jpeg){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
+![ConvertIO High-Level Architecure](image/Architecture.jpeg){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
 
 -   On-premises resident ConvertIO controller as described in Section 1.5.2. This controller packages up the VM and transmits to a similarly configured Cloud Controller VSI that takes receipt of the transmitted VM.
     -   On-Premises site requires an appropriate network connection to the IBM Cloud VPC, Cloud Controller and associated storage.
