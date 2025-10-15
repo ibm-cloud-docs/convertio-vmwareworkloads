@@ -1,7 +1,3 @@
-#  Name your file `toc.yaml`
-#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs-internal/writing?topic=writing-code-nav
-#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
----
 toc:
   properties:
     subcollection: convertio-vmwareworkloads
@@ -12,18 +8,18 @@ toc:
     href: /docs/convertio-vmwareworkloads
     path: convertio-vmwareworkloads
     label: Migrate VMware workloads to IBM Cloud VPC environment
-    description: Whitepaper for VMWare Migration to IBM Cloud with Primaryio. # Replace
+    description: Whitepaper for VMWare Migration to IBM Cloud with Primaryio.
     authors:
-    - name: Dwarkanath P Rao # Replace
+    - name: Dwarkanath P Rao
       title: STSM, IBM Cloud Solutioning
-      job-description: I am Senior Technical Staff Member for IBM Cloud. # Optional, max 350 characters
-      image: image/rao.jpg                      # Square image at least 200 px x 200 px
+      job-description: I am Senior Technical Staff Member for IBM Cloud.
+      image: image/rao.jpg
       url: https://www.linkedin.com/in/dwarakanath/
     - name: Imran Khan
       title: Technical Solution Architect, IBM Cloud Solutioning
-      image: image/Imran.jpg 
+      image: image/Imran.jpg
       url: https://www.linkedin.com/in/imran-khan-6499bb9
-    - name: Julian Henkin  
+    - name: Julian Henkin
       title: Client eXperience Officer, PrimaryIO
       image: image/Julian.jpg
       url: https://www.linkedin.com/in/julianhenkin/
