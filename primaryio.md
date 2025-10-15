@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2025
-lastupdated: "2025-10-01"
+lastupdated: "2025-10-15"
 
 keywords:
 
@@ -41,7 +41,7 @@ Before you can start migrating by using PrimaryIO, be sure that you have the fol
 	* VCenter credentials required for configuration modifications
 	* Agreed migration cutover to cloud
 	* SSL certificate
-	* ConvertIO software that is installed on a virtual machine that is running Rocky Linux 9. It needs to have a minimum of 8GB RAM, 4vCPU, and a 16GB root disk. 
+	* ConvertIO software that is installed on a virtual machine that is running Rocky Linux 9. It needs to have a minimum of 8GB RAM, 4vCPU, and a 16GB root disk.
 	* An additional VM-accessible storage data volume to stage exports. It should be sized at the largest VMDK sizing - at least 8TB as a recommended minimum.
 	* Align to customer's compliance and security frameworks
 
@@ -81,12 +81,14 @@ The solution, called *[CovertIO](https://www.primaryio.com/convertio/)* uses int
 ### How migration works
 {: #how-migration-works}
 
-Migration occurs in five phases as described in the following section. In the following image, you can see a profile, that is built by convertIO that is used for the migration. When you're ready to get started, see the [IBM Cloud catalog tile](https://cloud.ibm.com/catalog/services/convertio-vmware-workload-migration-and-conversion).
+In the following image, you can see a profile, that is built by convertIO that is used for the migration. When you're ready to get started, see the [IBM Cloud catalog tile](https://cloud.ibm.com/catalog/services/convertio-vmware-workload-migration-and-conversion).
 
 ![ConvertIO configuration UI](image/Convertio-console.png){: caption="Configuration for ConvertIO" caption-side="bottom"}
 
+Migration occurs in five phases.
+
 Discovery
-:   In the discovery phase, you identify and prioritize your VMs for migration by using the PrimaryIO director to source your inventory. This phrase necessitates PrimaryIO access to your VMs, including RVTools output and vCenter credentials that have permissions to enumerate VMs, read configs, and validate snapshots and clones. Also, an assessment of the current network or edge architecture is necessary to implement analogous resources in IBM Cloud. The director captures detials such as vCPU, memory, disk size, Operating system, IP addresses, services, and dependencies.
+:   In the discovery phase, you identify and prioritize your VMs for migration by using the PrimaryIO director to source your inventory. This phase necessitates PrimaryIO have access to your VMs, including RVTools output and vCenter credentials that have permissions to enumerate VMs, read configs, and validate snapshots and clones. Also, an assessment of the current network or edge architecture is necessary to implement analogous resources in IBM Cloud. The director captures detials such as vCPU, memory, disk size, Operating system, IP addresses, services, and dependencies.
 
 Preparation
 :   In the preparation phase, you select and prepare the VM candidates for migration and filter out non-candidates based on select criteria. To get started, you will tag your VMs by workload category and ciriticality, for example app, critical. Then, map dependencies and batch VMs into migration subgroups before documenting everything including a rollback plan. Next, you can define and configure networking before deploying your PrimaryIO agents. Lastly, provision your IBM Cloud environment by selecting a target zone, and setting up your VPC, subnets, routing tables, gateways, security groups, object storage, SSH keys, IAM roles, and a VPN or Direct Link.
