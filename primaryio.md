@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2025
-lastupdated: "2025-10-15"
+lastupdated: "2026-03-25"
 
 keywords:
 
@@ -68,7 +68,7 @@ IBM Cloud Virtual Private Cloud offers a secure, scalable, and high-performance 
 
 Migrating to VPC can be done with minimal disruption and a scalable cost efficiency. A primary driver might be to reduce reliance on Broadcom VMware by adopting a cloud-native architecture built on the widely used KVM hypervisor. PrimaryIO combines software, expertise, and proven processes to deliver a practical solution for low-downtime, application-consistent migration of VMware workloads to IBM Cloud Virtual Server Instances (VSIs) without relying on VMware post-migration.
 
-The solution, called *[CovertIO](https://www.primaryio.com/convertio/)* uses intelligent I/O handling, optimized data transfer, and virtual disk format conversion to minimize migration time, reduce risk, and simplify the overall process. Check out the following diagram to see a high level CovertIo architecture.
+The solution, called *[ConvertIO](https://www.primaryio.com/convertio/)* uses intelligent I/O handling, optimized data transfer, and virtual disk format conversion to minimize migration time, reduce risk, and simplify the overall process. Check out the following diagram to see a high level CovertIo architecture.
 
 ![ConvertIO High-Level Architecure](image/Architecture.png){: caption="ConvertIO High-level Architecture" caption-side="bottom"}
 
